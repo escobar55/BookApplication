@@ -52,6 +52,24 @@ public class BookApp {
         }
         //***********************************************************************//
 
+        //create various DB book using overloaded constructor
+        Book book01 = new Book("Head First Java", "Kathy Sierra and Bert Bates",
+                "Easy to read Java workbook", 47.50, true, "Java1001");
+        Book book02 = new Book("Thinking in Java", "Bruce Eckel",
+                "Details about Java under the hood", 20.00, true, "Java1002" );
+        Book book03 = new Book("OCP: Oracle Certified Professional Java SE", "Jeanne Boyarsky",
+                "Everything you need to know in one place", 45.00, true, "Orcl1003" );
+        Book book04 = new Book("Automate the Boring Stuff with Python", "Al Sweigart",
+                "Fun with Python", 10.50, true, "Python1004" );
+        Book book05 = new Book("The Maker's Guide to the Zombie Apocalypse", "Simon Monk",
+                "Defend Your Base with Simple Circuits, Arduino, and Raspberry Pi", 16.50, true, "Zombie1005" );
+        Book book06 = new Book("Raspberry Pi Projects for the Evil Genius", "Donald Norris",
+                "A dozen fiendishly fun projects for the Raspberry Pi!", 14.75, true, "Rasp1006" );
+
+        //Ask the user for a sku
+        System.out.println("Please enter a SKU: ");
+        String inputSku = key.nextLine();
+
 
     }
 }

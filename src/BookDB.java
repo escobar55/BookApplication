@@ -1,16 +1,11 @@
 import java.util.ArrayList;
 
-public class BookDB {
+public class BookDB extends Book {
     private ArrayList<Book> bookDB;
-    private String sku;
+
 
     public BookDB() {
     }//default constructor
-
-    public BookDB(String sku){
-        this.sku = sku;
-    }
-
 
     public ArrayList<Book> getBookDB() {
         return bookDB;
@@ -20,12 +15,14 @@ public class BookDB {
         this.bookDB = bookDB;
     }
 
-    public String getSku() {
-        return sku;
-    }
+    public static String booksDB(String inputSku){ ;
+        if(inputSku.equalsIgnoreCase("java1001")){
+            //Match the sku with a book and find return the book
 
-    public void setSku(String sku) {
-        this.sku = sku;
+        }
+
+        return;
+
     }
 }
 

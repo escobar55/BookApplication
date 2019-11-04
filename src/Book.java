@@ -4,18 +4,20 @@ public class Book {
     private String description;
     private double price;
     private boolean isInStock;
+    private String sku;
 
     //default constructor
     public Book(){
     }
 
     //Overloaded constructor
-    public Book(String title, String author, String description, double price, boolean isInStock) {
+    public Book(String title, String author, String description, double price, boolean isInStock, String sku) {
         this.title = title;
         this.author = author;
         this.description = description;
         this.price = price;
         this.isInStock = isInStock;
+        this.sku = sku;
     }
 
     //getters and setters for title
@@ -60,6 +62,15 @@ public class Book {
 
     public void setInStock(boolean inStock) {
         this.isInStock = inStock;
+    }
+
+    //getters and setters for SKU
+    public String getSku() {
+        return sku;
+    }
+
+    public void setSku(String sku) {
+        this.sku = sku;
     }
 
     //method getDisplayText
