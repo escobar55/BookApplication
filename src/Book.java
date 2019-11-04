@@ -67,5 +67,20 @@ public class Book {
         System.out.println("Author: " + author + " - Title: " + title + " - Description: " + description);
     }
 
+    //pricing method
+    public double getTotalPrice(int quantity){
+        double price = 0;
+
+        if(isInStock){
+            price = quantity * 20.00;
+            System.out.println("The total is: " + price);
+        }
+        else {
+            System.out.println("Sorry, the book is out of stock");
+        }
+
+        return price;
+    }
+
 
 }
