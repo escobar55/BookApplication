@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class BookApp {
@@ -23,6 +25,7 @@ public class BookApp {
 
         //Ask the user which book he/she would like to purchase
         Scanner key = new Scanner(System.in);
+        System.out.println(); //just a space
         System.out.println("Which book would you like to purchase? ");
         String bookName = key.nextLine();
 
@@ -36,6 +39,19 @@ public class BookApp {
         if(bookName.equalsIgnoreCase("Travel Colombia")){
             book2.getTotalPrice(quantity);
         }
+
+        System.out.println(); //just a space
+
+        //********** Calls the arrayList from the BookDB class *******************//
+        ArrayList<Book> booksArrayList = new ArrayList<>();
+        Collections.addAll(booksArrayList, book1, book2);
+        BookDB bookDB = new BookDB();
+        bookDB.setBookDB(booksArrayList);
+        for (Book b : bookDB.getBookDB()){
+            b.getDisplayText();
+        }
+        //***********************************************************************//
+
 
     }
 }
