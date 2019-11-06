@@ -15,14 +15,37 @@ public class BookDB extends Book {
         this.bookDB = bookDB;
     }
 
-    public static String booksDB(String inputSku){ ;
-        if(inputSku.equalsIgnoreCase("java1001")){
-            //Match the sku with a book and find return the book
+    //Create an Array do display the books according to the SKU
+    public ArrayList<Book> check(String inputSku){
+        //create an array list to store the matched books
+        boolean checker;
+        ArrayList<Book> matched = new ArrayList<>();
+
+        //loop through the array
+        for(Book b : bookDB){
+            checker = true;
+            for(String d : b.getSku()){
+                if(!d.equalsIgnoreCase(inputSku)){
+                    checker = false;
+                    //System.out.println("not added");
+                }
+                break;
+            }
+            if(checker == true){
+                matched.add(b);
+                //System.out.println("gets added");
+            }
 
         }
-
-        return;
-
+        return matched;
     }
+    public void print(ArrayList<Book> matched){
+        for(Book c : matched){
+            c.getDisplayText();
+        }
+    }
+
+
+
 }
 
